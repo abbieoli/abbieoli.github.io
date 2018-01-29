@@ -16,46 +16,8 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style media="screen">
-      .blue {
-        background-color: blue;
-
-
-      }
-.height1{
-height:  600px;
-}
-.height2{
-height:  150px;
-}
-      .red {
-        background-color: red;
-
-      }
-
-      .yellow {
-        background-color: yellow;
-
-      }
-
-
-    </style>
   </head>
   <body>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 height1 randomColor"></div>
-      </div>
-
-    <div class="row">
-      <div class="col-md-9 height2 randomColor"></div>
-
-      </div>
-
-      <div class="row">
-        <div class="col-md-12 height1 randomColor"></div>
-      </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -78,6 +40,55 @@ height:  150px;
         })
       })
     </script>
+
+    <script type="text/javascript">
+//alert ("my JS!")
+//name of a function, then () to call the transition-timing-function
+//in this case "my JS!" is called the 'parameter'
+//in this case its text, which is always within "or"
+
+console.log("Write to the console...");
+
+//above are built-in functions
+
+//we can also define our own functions
+
+function myFirstFunction(){}
+
+//Boolean values are true or false
+var myOnOff = true;
+var isDaytime = false;
+
+//number values
+var salary = 100000;
+var carPrice = 25000.25;
+
+//text or string values
+var emailAddress = "andersonguelphjs@gmail.com";
+var sentence = 'The Judgement of Paris.';
+var anotherSentence = "Anderson's Class";
+
+var salary1 = 100000;
+var salary2 = "100000";
+
+var taxes = 25000;
+
+console.log("My take home pay is" + (salary1-taxes));
+
+console.log("a bunch of info :" + salary + "and " + carPrice + "and even more " + isDaytime);
+
+var myConcatention = "2a bunch of info :" + salary +" "and" "+ carPrice" "and even more" "+isDaytime"";
+
+console.log(myConcatention);
+
+functions writeToConsole(myString){
+  console.log(myString);
+}
+
+writeToConsole(myConcatention);
+writeToConsole("3"+ myConcatention);
+
     </script>
+
   </body>
 </html>
