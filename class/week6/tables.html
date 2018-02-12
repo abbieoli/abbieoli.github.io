@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Week 4</title>
+  <title>Winter Olympics</title>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -17,10 +17,99 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+  <style media="screen">
+    .height1 {
+      height: 80px;
+    }
+
+    .height2 {
+      height: 600px;
+    }
+  </style>
 </head>
 
 <body>
 
+  <div class="container"> </div>
+  <div class="row">
+    <div class="col-md-12 height1 randomColor"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 height2 randomColor"></div>
+
+    <div class="col-md-8 height2 randomColor">
+<table class="table table-striped table-hover">
+  <tr>
+    <th>Name</th>
+    <th>Sport</th>
+     <th>Age</th>
+     <th>Height</th>
+     <th>Medals (2018)</th>
+  </tr>
+  <tr>
+    <td>Scott Moir</td>
+    <td>Figure Skating</td>
+     <td>30</td>
+     <td>178cm</td>
+     <td>Gold</td>
+  </tr>
+  <tr>
+    <td>Mikael Kingsbury</td>
+    <td>Freestyle Skiing</td>
+     <td>25</td>
+     <td>175cm</td>
+     <td>Gold</td>
+  </tr>
+  <tr>
+    <td>Max Parot</td>
+    <td>Snowboard</td>
+     <td>23</td>
+     <td>180cm</td>
+     <td>Silver</td>
+  </tr>
+  <tr>
+    <td>Piper Gilles</td>
+    <td>Figure Skating</td>
+     <td>26</td>
+     <td>163cm</td>
+     <td>None</td>
+  </tr>
+  <tr>
+    <td>Mark McMorris</td>
+    <td>Snowboard</td>
+     <td>23</td>
+     <td>180cm</td>
+     <td>Bronse</td>
+  </tr>
+  <tr>
+    <td>Laurie Blouin</td>
+    <td>Snowboard</td>
+     <td>21</td>
+     <td>165cm</td>
+     <td>Silver</td>
+  </tr>
+  <tr>
+    <td>Justine Dufour-Lapointe</td>
+    <td>Freestyle Skiing</td>
+     <td>23</td>
+     <td>163cm</td>
+     <td>Silver</td>
+  </tr>
+
+
+</table>
+    </div>
+
+    <div class="col-md-2 height2 randomColor"></div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-12 height1 randomColor">
+    </div>
+  </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -32,66 +121,15 @@
       function getRandomColor() {
         return Math.floor(Math.random() * 255);
       }
-      //get all the elements (div) with class .randomColor
+
       var randomColor = $(".randomColor");
 
-      //loop through all elements
-      //for each element change the css background colour to RGB + 3 random colours
       $.each(randomColor, function(index, item) {
         $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
       })
     })
   </script>
 
-  <script type="text/javascript">
-    //alert ("my JS!")
-    //name of a function, then () to call the transition-timing-function
-    //in this case "my JS!" is called the 'parameter'
-    //in this case its text, which is always within "or"
-
-    console.log("Write to the console...");
-
-    //above are built-in functions
-
-    //we can also define our own functions
-
-    function myFirstFunction() {}
-
-    //Boolean values are true or false
-    var myOnOff = true;
-    var isDaytime = false;
-
-    //number values
-    var salary = 100000;
-    var carPrice = 25000.25;
-
-    //text or string values
-    var emailAddress = "andersonguelphjs@gmail.com";
-    var sentence = 'The Judgement of Paris.';
-    var anotherSentence = "Anderson's Class";
-
-    var salary1 = 100000;
-    var salary2 = "100000";
-
-    var taxes = 25000;
-
-    console.log("My take home pay is" + (salary1 - taxes));
-
-    console.log("a bunch of info :" + salary + "and " + carPrice + "and even more " + isDaytime);
-
-    var myConcatention = "2a bunch of info :" + salary + " "
-    and " " + carPrice " "
-    and even more " " + isDaytime "";
-
-    console.log(myConcatention);
-
-    functions writeToConsole(myString) {
-      console.log(myString);
-    }
-
-    writeToConsole(myConcatention);
-    writeToConsole("3" + myConcatention);
-  </script>
 
 </body>
 
