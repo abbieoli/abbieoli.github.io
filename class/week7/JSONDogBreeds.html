@@ -108,8 +108,8 @@
       {
         "breed": "german shepard",
         "hairLength": "Short",
-        "color": "brown"
-        "isOutdoor": true,
+        "color": "brown",
+        "isOutdoor":true,
         "isFoundInWild": false,
         "age": 7,
         "name": "Bastain",
@@ -189,38 +189,21 @@
         "</tr>";
 
       //here is the loop of thr array 'cats'
-      for (var i = 0; i < dogs.length; i++) {
+      for (var i = 0; i <dogs.length; i++) {
         console.log("i" + i);
-        html +=
-          "<tr>" +
-          "<td><img src= '" + dogs[i].imgUrl + "'/></td>"
-        "<td>picture</td>" +
-        "<td" + dogs {
-          i
-        }.name + "</td>"
-        "<td>" + dogs {
-          i
-        }.owner + " </td>" +
-          "<td>" + dogs {
-            i
-          }.age + "</td>" +
-          "<td>" + dogs {
-            i
-          }.breed + "</td>" +
-          "<td>" + dogs {
-            i
-          }.color + "</td>" +
-          "<td>" + dogs {
-            i
-          }.hairLength + "</td>" +
-          "<td>" + dogs {
-            i
-          }.isOutDoor + "</td>" +
-          "<td>" + dogs {
-            i
-          }.isFoundInWild + "</td>" +
-          "</tr>";
-      }
+        html+=
+        "<tr>"+
+        "<td><img src= '"+dogs[i].imgUrl+"'/></td>"
+          "<td>picture</td>"+
+          "<td"+dogs{i}.name+"</td>"+
+          "<td>"+dogs{i}.owner+"</td>"+
+          "<td>"+dogs{i}.age+"</td>"+
+          "<td>"+dogs{i}.breed+"</td>"+
+          "<td>"+dogs{i}.color+"</td>"+
+          "<td>"+dogs{i}.hairLength+"</td>"+
+          "<td>"+dogs{i}.isOutDoor+"</td>"+
+          "<td>"+dogs{i}.isFoundInWild+"</td>"+
+        "</tr>";
 
       html += "</table>";
       $(".output").html(html);
