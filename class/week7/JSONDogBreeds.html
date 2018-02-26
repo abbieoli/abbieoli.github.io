@@ -1,217 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dogs</title>
-<style media="screen">
-  .height1{
-    height: 75px;
-  }
-  .height2{
-    height:600px;
-  }
-</style>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dogs</title>
+  <style media="screen">
+    .height1 {
+      height: 75px;
+    }
+
+    .height2 {
+      height: 600px;
+    }
+  </style>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 height1 randomColor">
+</head>
 
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 height1 randomColor">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 height2 randomColor">
+
+      </div>
+      <div class="col-md-8 height2 output">
+
+      </div>
+      <div class="col-md-2 height2 randomColor">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 height1 randomColor">
+
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-2 height2 randomColor">
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //get a random color between 0 and 255
+      function getRandomColor() {
+        return Math.floor(Math.random() * 255);
+      }
 
-    </div>
-    <div class="col-md-8 height2 output">
+      var randomColor = $(".randomColor");
 
-    </div>
-    <div class="col-md-2 height2 randomColor">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 height1 randomColor">
-
-    </div>
-  </div>
-</div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        //get a random color between 0 and 255
-        function getRandomColor() {
-          return Math.floor(Math.random() * 255);
-        }
-
-        var randomColor = $(".randomColor");
-
-        $.each(randomColor, function(index, item) {
-          $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
-        })
-
+      $.each(randomColor, function(index, item) {
+        $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
       })
-    </script>
 
-<script>
-  var dogs =
-  [
-  {
-    "breed":"pug",
-    "hairLength":"medium",
-    "color":"brown",
-    "isOutdoor":true,
-    "isFoundInWild":false,
-    "age":1,
-    "name":"Buddy",
-    "owner":"Abbie",
-    "imgUrl":"http://andersonguelphjs.github.io/class/week7/img/dog0.jpg"
-  },
-  {
-    "breed":"husky",
-  "hairLength":"long",
-  "color":"grey",
-  "isOutdoor":true,
-  "isFoundInWild":false,
-  "age":2,
-  "name":"Rusky",
-  "owner":"Zeus",
-  "imgUrl":"http://andersonguelphjs.github.io/class/week7/img/dog1.jpg"
-},
-{
-  "breed":"cocker spaniel",
-  "hairLength":"long",
-  "color":"beige",
-  "isOutdoor":true,
-  "isFoundInWild":false,
-  "age":5,
-  "name":"Chester",
-  "owner":"sydney",
-  "imgUrl":"http://andersonguelphjs.github.io/class/week7/img/dog2.jpg"
-},
-{
-    "breed":"german shepard",
-    "hairLength":"Short",
-    "color":"brown"
-    "isOutdoor": true,
-    "isFoundInWild":false,
-    "age":7,
-    "name":"Bastain",
-    "owner":"Kevin",
-    "imgUrl":"http://andersonguelphjs.github.io/class/week7/img/dog3.jpg"
-  },
-{
-"breed":"bulldog",
-        "hairLength":"short",
-        "color":"brown",
-        "isOutdoor":true,
-        "isFoundInWild":false,
-        "age":4,
-        "name":"Bash",
-        "owner":"Loucas",
-        "imgURL":"http://andersonguelphjs.github.io/class/week7/img/dog4.jpg"
-},
-{
-      "breed":"great dane",
-      "hairLength":"short",
-      "color":"black",
-      "isOutdoor":true,
-      "isFoundInWild":false,
-      "age":7,
-      "name":"Leon",
-      "owner":"Bash",
-      "imgUrl":"http://andersonguelphjs.github.io/class/week7/img/dog5.jpg"
-},
-{
-  "breed" : "beagle",
-  "hairLength" : "medium",
-  "isOutdoor" : true,
-  "isFoundInWild" : false,
-  "age" : 6,
-  "name" : "tequila",
-  "owner" : "shouldBeMine",
-  "imgUrl" : "http://andersonguelphjs.github.io/class/week7/img/cat6.jpg"
-},
- {
-"breed": "poodle",
-  "hairLength": "medium-long",
-  "color": "white",
-  "isOutdoor": true,
-  "isFoundInWild": false,
-  "age": 16,
-  "name": "Nala",
-  "owner": "Sarah",
-  "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/dog7.jpg"
-}
-,
-{
-        "breed":"pitbull",
-        "hairLength":"short",
-        "color":"black",
-        "isOutdoor":true,
+    })
+  </script>
 
-        "isFoundInWild":false,
-        "age":5,
+  <script>
+    var dogs = [{
+        "breed": "pug",
+        "hairLength": "medium",
+        "color": "brown",
+        "isOutdoor": true,
+        "isFoundInWild": false,
+        "age": 1,
+        "name": "Buddy",
+        "owner": "Abbie",
+        "imgUrl": "img/dog0.jpg"
+      },
+      {
+        "breed": "husky",
+        "hairLength": "long",
+        "color": "grey",
+        "isOutdoor": true,
+        "isFoundInWild": false,
+        "age": 2,
+        "name": "Rusky",
+        "owner": "Zeus",
+        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/dog1.jpg"
+      },
+      {
+        "breed": "cocker spaniel",
+        "hairLength": "long",
+        "color": "beige",
+        "isOutdoor": true,
+        "isFoundInWild": false,
+        "age": 5,
+        "name": "Chester",
+        "owner": "sydney",
+        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/dog2.jpg"
+      },
+      {
+        "breed": "german shepard",
+        "hairLength": "Short",
+        "color": "brown"
+        "isOutdoor": true,
+        "isFoundInWild": false,
+        "age": 7,
+        "name": "Bastain",
+        "owner": "Kevin",
+        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/dog3.jpg"
+      },
+      {
+        "breed": "bulldog",
+        "hairLength": "short",
+        "color": "brown",
+        "isOutdoor": true,
+        "isFoundInWild": false,
+        "age": 4,
+        "name": "Bash",
+        "owner": "Loucas",
+        "imgURL": "http://andersonguelphjs.github.io/class/week7/img/dog4.jpg"
+      },
+      {
+        "breed": "great dane",
+        "hairLength": "short",
+        "color": "black",
+        "isOutdoor": true,
+        "isFoundInWild": false,
+        "age": 7,
+        "name": "Leon",
+        "owner": "Bash",
+        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/dog5.jpg"
+      },
+      {
+        "breed": "beagle",
+        "hairLength": "medium",
+        "isOutdoor": true,
+        "isFoundInWild": false,
+        "age": 6,
+        "name": "tequila",
+        "owner": "shouldBeMine",
+        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/dog6.jpg"
+      },
+      {
+        "breed": "poodle",
+        "hairLength": "medium-long",
+        "color": "white",
+        "isOutdoor": true,
+        "isFoundInWild": false,
+        "age": 16,
+        "name": "Nala",
+        "owner": "Sarah",
+        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/dog7.jpg"
+      },
+      {
+        "breed": "pitbull",
+        "hairLength": "short",
+        "color": "black",
+        "isOutdoor": true,
+
+        "isFoundInWild": false,
+        "age": 5,
         "name": "Muncher",
         "owner": "Abel",
-        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/cat8.jpg"
-}
-];
+        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/dog8.jpg"
+      }
+    ];
 
-$(document).ready(function(){
-  //$(".output").html("test output");
-  var html="<table class='table table-striped table-hover'>"+
-  "<tr>"+
-    "<th>picture</th>"+
-    "<th>name</th>"+
-    "<th>age</th>"+
-    "<th>owner</th>"+
-    "<th>breed</th>"+
-    "<th>color</th>"+
-    "<th>hair length</th>"+
-    "<th>outdoor ?</th>"+
-    "<th>wild ?</th>"+
-  "</tr>";
+    $(document).ready(function() {
+      //$(".output").html("test output");
+      var html = "<table class='table table-striped table-hover'>" +
+        "<tr>" +
+        "<th>picture</th>"+
+        "<th>name</th>"+
+        "<th>age</th>"+
+        "<th>owner</th>"+
+        "<th>breed</th>"+
+        "<th>color</th>"+
+        "<th>hair length</th>"+
+        "<th>outdoor ?</th>"+
+        "<th>wild ?</th>"+
+        "</tr>";
 
-  //here is the loop of thr array 'cats'
-  for(var i=0;i<cats.length;i++){
-    console.log("i" +i);
-    html+=
-    "<tr>"+
-    "<td><img src= '"+cats[i].imgUrl+"'/></td>"
-      "<td>picture</td>"+
-      "<td"+dogs{i}.name+"</td>"
-      "<td>" +dogs{i}.owner+ " </td>"+
-      "<td>"+dogs{i}.age+"</td>"+
-      "<td>"+dogs{i}.breed+"</td>"+
-      "<td>"+dogs{i}.color+"</td>"+
-      "<td>"+dogs{i}.hairLength+"</td>"+
-      "<td>"+dogs{i}.isOutDoor+"</td>"+
-      "<td>"+dogs{i}.isFoundInWild+"</td>"+
-    "</tr>";
-  }
+      //here is the loop of thr array 'cats'
+      for (var i = 0; i < dogs.length; i++) {
+        console.log("i" + i);
+        html +=
+          "<tr>" +
+          "<td><img src= '" + dogs[i].imgUrl + "'/></td>"
+        "<td>picture</td>" +
+        "<td" + dogs {
+          i
+        }.name + "</td>"
+        "<td>" + dogs {
+          i
+        }.owner + " </td>" +
+          "<td>" + dogs {
+            i
+          }.age + "</td>" +
+          "<td>" + dogs {
+            i
+          }.breed + "</td>" +
+          "<td>" + dogs {
+            i
+          }.color + "</td>" +
+          "<td>" + dogs {
+            i
+          }.hairLength + "</td>" +
+          "<td>" + dogs {
+            i
+          }.isOutDoor + "</td>" +
+          "<td>" + dogs {
+            i
+          }.isFoundInWild + "</td>" +
+          "</tr>";
+      }
 
-html += "</table>";
-$(".output").html(html);
+      html += "</table>";
+      $(".output").html(html);
 
-});
+    });
+  </script>
 
-</script>
+</body>
 
-  </body>
 </html>
