@@ -73,104 +73,72 @@
 
   <script>
     var dogs = [{
+      "name": "Buddy",
+      "age": 1,
         "breed": "pug",
-        "hairLength": "medium",
-        "color": "brown",
-        "isOutdoor": true,
-        "isFoundInWild": false,
-        "age": 1,
-        "name": "Buddy",
         "owner": "Abbie",
-        "imgUrl": "img/dog0.jpg"
-      },
-      {
-        "breed": "husky",
-        "hairLength": "long",
-        "color": "grey",
-        "isOutdoor": true,
-        "isFoundInWild": false,
-        "age": 2,
-        "name": "Rusky",
-        "owner": "Zeus",
-        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/dog1.jpg"
-      },
-      {
-        "breed": "cocker spaniel",
-        "hairLength": "long",
-        "color": "beige",
-        "isOutdoor": true,
-        "isFoundInWild": false,
-        "age": 5,
-        "name": "Chester",
-        "owner": "sydney",
-        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/dog2.jpg"
-      },
-      {
-        "breed": "german shepard",
-        "hairLength": "Short",
         "color": "brown",
+        "hairLength": "medium",
+        "isOutdoor": true,
+        "isFoundInWild": false,
+        "imgUrl": "img/dog0.jpg",
+      },
+      {
+        "name": "Rusky",
+        "age": 2,
+        "owner": "Zeus",
+        "breed": "husky",
+        "color": "grey",
+        "hairLength": "long",
+        "isOutdoor": true,
+        "isFoundInWild": false,
+        "imgUrl": "img/dog1.jpg",
+      },
+      {
+        "name": "Chester",
+        "age": 5,
+        "owner": "sydney",
+        "breed": "cocker spaniel",
+        "color": "beige",
+        "hairLength": "long",
+        "isOutdoor": true,
+        "isFoundInWild": false,
+        "imgUrl": "img/dog2.jpg",
+      },
+      {
+        "name": "Bastain",
+        "age": 7,
+        "owner": "Kevin",
+        "breed": "german shepard",
+        "color": "brown",
+        "hairLength": "Short",
         "isOutdoor":true,
         "isFoundInWild": false,
-        "age": 7,
-        "name": "Bastain",
-        "owner": "Kevin",
-        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/dog3.jpg"
+        "imgUrl": "img/dog3.jpg",
       },
       {
-        "breed": "bulldog",
-        "hairLength": "short",
-        "color": "brown",
-        "isOutdoor": true,
-        "isFoundInWild": false,
-        "age": 4,
         "name": "Bash",
+        "age": 4,
         "owner": "Loucas",
-        "imgURL": "http://andersonguelphjs.github.io/class/week7/img/dog4.jpg"
+        "breed": "bulldog",
+        "color": "brown",
+        "hairLength": "short",
+        "isOutdoor": true,
+        "isFoundInWild": false,
+        "imgURL": "img/dog4.jpg",
       },
       {
+        "name": "Bash",
+        "age": 3,
+        "owner": "Abbie",
         "breed": "great dane",
-        "hairLength": "short",
         "color": "black",
+        "hairLength": 7,
         "isOutdoor": true,
         "isFoundInWild": false,
-        "age": 7,
-        "name": "Leon",
-        "owner": "Bash",
-        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/dog5.jpg"
+        "imgUrl": "img/dog5.jpg",
       },
-      {
-        "breed": "beagle",
-        "hairLength": "medium",
-        "isOutdoor": true,
-        "isFoundInWild": false,
-        "age": 6,
-        "name": "tequila",
-        "owner": "shouldBeMine",
-        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/dog6.jpg"
-      },
-      {
-        "breed": "poodle",
-        "hairLength": "medium-long",
-        "color": "white",
-        "isOutdoor": true,
-        "isFoundInWild": false,
-        "age": 16,
-        "name": "Nala",
-        "owner": "Sarah",
-        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/dog7.jpg"
-      },
-      {
-        "breed": "pitbull",
-        "hairLength": "short",
-        "color": "black",
-        "isOutdoor": true,
 
-        "isFoundInWild": false,
-        "age": 5,
-        "name": "Muncher",
-        "owner": "Abel",
-        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/dog8.jpg"
-      }
     ];
 
     $(document).ready(function() {
@@ -184,8 +152,8 @@
         "<th>breed</th>"+
         "<th>color</th>"+
         "<th>hair length</th>"+
-        "<th>outdoor ?</th>"+
-        "<th>wild ?</th>"+
+        "<th>outdoor?</th>"+
+        "<th>wild?</th>"+
         "</tr>";
 
       //here is the loop of thr array 'cats'
@@ -195,22 +163,23 @@
         "<tr>"+
         "<td><img src= '"+dogs[i].imgUrl+"'/></td>"
           "<td>picture</td>"+
-          "<td"+dogs{i}.name+"</td>"+
-          "<td>"+dogs{i}.owner+"</td>"+
-          "<td>"+dogs{i}.age+"</td>"+
-          "<td>"+dogs{i}.breed+"</td>"+
-          "<td>"+dogs{i}.color+"</td>"+
-          "<td>"+dogs{i}.hairLength+"</td>"+
-          "<td>"+dogs{i}.isOutDoor+"</td>"+
-          "<td>"+dogs{i}.isFoundInWild+"</td>"+
+          "<td>"+dogs[i].name+"</td>"+
+          "<td>"+dogs[i].owner+"</td>"+
+          "<td>"+dogs[i].age+"</td>"+
+          "<td>"+dogs[i].breed+"</td>"+
+          "<td>"+dogs[i].color+"</td>"+
+          "<td>"+dogs[i].hairLength+"</td>"+
+          "<td>"+dogs[i].isOutDoor+"</td>"+
+          "<td>"+dogs[i].isFoundInWild+"</td>"+
         "</tr>";
+      }
 
       html += "</table>";
       $(".output").html(html);
 
-    });
+});
+
   </script>
 
 </body>
-
 </html>
